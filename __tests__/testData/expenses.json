@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "Grocery Shopping",
+    "title": "Grocery Shopping",
+    "amount": 50,
+    "date": "2024-08-01",
+    "category": "expense",
+    "description": "Weekly grocery shopping"
+  },
+  {
+    "_id": "Restaurant",
+    "title": "Dinner at Italian Restaurant",
+    "amount": 75,
+    "date": "2024-08-02",
+    "category": "expense",
+    "description": "Dinner with friends"
+  },
+  {
+    "_id": "Salary",
+    "title": "August Salary",
+    "amount": 3000,
+    "date": "2024-08-01",
+    "category": "income",
+    "description": "Monthly salary for August"
+  },
+  {
+    "_id": "Gym Membership",
+    "title": "Gym Membership Renewal",
+    "amount": 100,
+    "date": "2024-08-05",
+    "category": "expense",
+    "description": "Annual gym membership renewal"
+  },
+  {
+    "_id": "Utility Bill",
+    "title": "Electricity Bill",
+    "amount": 120,
+    "date": "2024-08-03",
+    "category": "expense",
+    "description": "Monthly electricity bill payment"
+  },
+  {
+    "_id": "Freelance Project",
+    "title": "Freelance Web Design Project",
+    "amount": 500,
+    "date": "2024-08-10",
+    "category": "income",
+    "description": "Payment for web design services"
+  }
+]
