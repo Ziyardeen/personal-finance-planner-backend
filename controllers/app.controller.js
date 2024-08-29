@@ -3,7 +3,7 @@ const {
   fetchExpenses,
   removeExpenseByTitle,
   fetchExpenseByTitle,
-  modifyExpenseByTitle,
+  modifyExpenseById,
 } = require("../models/app.models");
 
 const postExpense = (req, res, next) => {
@@ -59,7 +59,7 @@ const deleteExpsenseByTitle = (req, res, next) => {
 const updateExpenseById = (req, res, next) => {
   const update = req.body;
   const { id } = req.params;
-  modifyExpenseByTitle(id, update)
+  modifyExpenseById(id, update)
     .then((expense) => {
       res.status(201).send(expense);
     })
@@ -74,5 +74,5 @@ module.exports = {
   getExpenses,
   getExpenseByTitle,
   deleteExpsenseByTitle,
-  updateExpenseByTitle,
+  updateExpenseById,
 };
