@@ -19,7 +19,7 @@ app.use(express.json());
 app.post("/api/expenses", postExpense);
 app.get("/api/expenses", getExpenses);
 app.get("/api/expenses/:title", getExpenseByTitle);
-app.patch("/api/expenses/:title", updateExpenseByTitle);
+app.patch("/api/expenses/:id", updateExpenseByTitle);
 app.delete("/api/expenses/:title", deleteExpsenseByTitle);
 
 module.exports = app;

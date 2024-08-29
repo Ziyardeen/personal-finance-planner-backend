@@ -1,5 +1,5 @@
-const Expense = require("../db/database.js");
-console.log(Expense);
+const { Expense } = require("../db/database.js");
+
 async function insertExpense(expense) {
   try {
     const newExpense = new Expense(expense).save();
@@ -26,9 +26,9 @@ async function fetchExpenseByTitle(title) {
   }
 }
 
-async function modifyExpenseById(id, update) {
+async function modifyExpenseByTitle(title, update) {
   try {
-    const expenses = await Expense.findOneAndUpdate({ _id: id }, update, {
+    const expenses = await Expense.findOneAndUpdate({ title: title }, update, {
       returnOriginal: false,
     });
     return expenses;
@@ -48,6 +48,6 @@ module.exports = {
   insertExpense,
   fetchExpenses,
   removeExpenseByTitle,
-  modifyExpenseById,
+  modifyExpenseByTitle,
   fetchExpenseByTitle,
 };
