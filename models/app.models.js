@@ -26,9 +26,9 @@ async function fetchExpenseByTitle(title) {
   }
 }
 
-async function modifyExpenseByTitle(title, update) {
+async function modifyExpenseById(id, update) {
   try {
-    const expenses = await Expense.findOneAndUpdate({ _id: title }, update, {
+    const expenses = await Expense.findOneAndUpdate({ _id: id }, update, {
       returnOriginal: false,
     });
     return expenses;
@@ -48,6 +48,6 @@ module.exports = {
   insertExpense,
   fetchExpenses,
   removeExpenseByTitle,
-  modifyExpenseByTitle,
+  modifyExpenseById,
   fetchExpenseByTitle,
 };

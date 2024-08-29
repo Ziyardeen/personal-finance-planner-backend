@@ -56,10 +56,10 @@ const deleteExpsenseByTitle = (req, res, next) => {
       next(err);
     });
 };
-const updateExpenseByTitle = (req, res, next) => {
+const updateExpenseById = (req, res, next) => {
   const update = req.body;
-  const { title } = req.params;
-  modifyExpenseByTitle(title, update)
+  const { id } = req.params;
+  modifyExpenseByTitle(id, update)
     .then((expense) => {
       res.status(201).send(expense);
     })
