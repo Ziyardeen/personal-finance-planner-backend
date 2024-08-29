@@ -28,7 +28,7 @@ async function fetchExpenseByTitle(title) {
 
 async function modifyExpenseByTitle(title, update) {
   try {
-    const expenses = await Expense.findOneAndUpdate({ title: title }, update, {
+    const expenses = await Expense.findOneAndUpdate({ _id: title }, update, {
       returnOriginal: false,
     });
     return expenses;

@@ -61,7 +61,6 @@ const updateExpenseByTitle = (req, res, next) => {
   const { title } = req.params;
   modifyExpenseByTitle(title, update)
     .then((expense) => {
-      console.log(expense);
       res.status(201).send(expense);
     })
     .catch((err) => {
