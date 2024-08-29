@@ -18,7 +18,6 @@ const postExpense = (req, res, next) => {
       next(err);
     });
 };
-
 const getExpenses = (req, res, next) => {
   fetchExpenses()
     .then((expense) => {
@@ -49,7 +48,7 @@ const deleteExpsenseByTitle = (req, res, next) => {
   removeExpenseByTitle(title)
     .then((expense) => {
       console.log(expense);
-      res.status(204).send(expense);
+      res.status(201).send(expense);
     })
     .catch((err) => {
       console.log(err);
@@ -61,6 +60,7 @@ const updateExpenseByTitle = (req, res, next) => {
   const { title } = req.params;
   modifyExpenseByTitle(title, update)
     .then((expense) => {
+      console.log(expense);
       res.status(201).send(expense);
     })
     .catch((err) => {

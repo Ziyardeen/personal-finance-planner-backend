@@ -1,5 +1,5 @@
-const { Expense } = require("../db/database.js");
-
+const Expense = require("../db/database.js");
+console.log(Expense);
 async function insertExpense(expense) {
   try {
     const newExpense = new Expense(expense).save();
