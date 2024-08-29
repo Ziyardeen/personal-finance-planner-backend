@@ -18,8 +18,8 @@ app.use(express.json());
 // API Routes
 app.post("/api/expenses", postExpense);
 app.get("/api/expenses", getExpenses);
-app.get("/api/expense/:title", getExpenseByTitle);
-app.patch("/api/expense/:title", updateExpenseByTitle);
-app.delete("/api/expense/:title", deleteExpsenseByTitle);
+app.get("/api/expenses/:title", getExpenseByTitle);
+app.patch("/api/expenses/:title", updateExpenseByTitle);
+app.delete("/api/expenses/:title", deleteExpsenseByTitle);
 
 module.exports = app;
